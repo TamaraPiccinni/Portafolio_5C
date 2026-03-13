@@ -13,21 +13,26 @@
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#componentes">Hardware</a></li>
+            <li><a href="#perifericos">Periféricos</a></li>
             <li><a href="#presupuestos">Presupuestos</a></li>
             <li><a href="#mantenimiento">Mantenimiento</a></li>
-            <li><a href="#practicas">Prácticas</a></li>
+            <li><a href="#arduino">Arduino e IoT</a></li>
         </ul>
     </nav>
-
 
     <main>
         <section id="inicio">
             <h1>Bitácora de Laboratorio 2026</h1>
             <p>Tamara Piccinni - Docente - 5to Año</p>
+
+            <svg width="100" height="100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
         </section>
 
         <section id="componentes">
-            <h2>Diagnóstico de Componentes (PC Tamy)</h2>
+            <h2>Arquitectura y Componentes (PC Tamy)</h2>
             <a href="https://docs.google.com/document/d/1iBr_C53eDOQ4E-mRaSwbiN0lhdJy670shvgOXKSPQ-k/edit?usp=sharing">Ver
                 Ficha Técnica Completa</a>
             <div class="galeria-grid">
@@ -48,8 +53,76 @@
                 <div class="tarjeta">
                     <img src="images/ram.jpg" alt="Memoria RAM">
                     <h3>Memoria RAM</h3>
-                    <p>Capacidad: 16.0 GB instalada (15.8 GB utilizable)</p>
+                    <p>Capacidad: 16.0 GB DDR4</p>
                 </div>
+                <div class="tarjeta">
+                    <img src="images/gpu.jpg" alt="Tarjeta Gráfica">
+                    <h3>Tarjeta Gráfica (GPU)</h3>
+                    <p>Modelo: [Ej: Gráficos Integrados Intel UHD 630]</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/ssd.jpg" alt="Unidad de Estado Sólido SSD">
+                    <h3>Almacenamiento</h3>
+                    <p>Tipo: SSD NVMe M.2 / HDD SATA</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/fuente.jpg" alt="Fuente de Alimentación">
+                    <h3>Fuente de Alimentación (PSU)</h3>
+                    <p>Potencia: [Ej: 600W 80 Plus Bronze]</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/cooler.jpg" alt="Sistema de refrigeración del CPU">
+                    <h3>Sistema de Refrigeración</h3>
+                    <p>Tipo: Disipador por aire / Refrigeración Líquida</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/gabinete.jpg" alt="Gabinete de la PC">
+                    <h3>Gabinete (Chasis)</h3>
+                    <p>Formato: Mid Tower ATX</p>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <section id="perifericos">
+            <h2>Periféricos y Dispositivos E/S</h2>
+            <p>Interfaces físicas de comunicación con el usuario.</p>
+
+            <div class="galeria-grid">
+                <div class="tarjeta">
+                    <img src="images/monitor.jpg" alt="Monitor">
+                    <h3>Monitor (Salida)</h3>
+                    <p>Resolución: 1920x1080 (Full HD) a 75Hz</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/teclado_mouse.jpg" alt="Kit Teclado y Mouse">
+                    <h3>Teclado y Mouse (Entrada)</h3>
+                    <p>Conectividad: USB / Inalámbrico 2.4GHz</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/auriculares.jpg" alt="Auriculares inalámbricos">
+                    <h3>Auriculares (Salida/Entrada)</h3>
+                    <p>Modelo: Logitech Zone Vibe 125</p>
+                    <p>Conectividad: Receptor USB-A / Bluetooth</p>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; margin-top: 40px; padding: 25px; background-color: #e2e8f0; border-radius: 8px;">
+                <h3>Base de Datos de Conocimiento</h3>
+                <p>Acceso al informe técnico sobre funcionamiento de componentes, arquitectura de buses y resolución de
+                    cuellos de botella (Bottlenecks).</p>
+                <br>
+                <a href="LINK_A_TU_GOOGLE_DOC_TEORICO" target="_blank" class="boton-accion"
+                    style="text-decoration: none;">
+                    Leer Informe Completo de Arquitectura
+                </a>
             </div>
         </section>
         <section id="presupuestos">
@@ -69,7 +142,7 @@
                     <p>Enfoque en ofimática, durabilidad y mejor relación costo-beneficio.</p>
                     <a href="LINK_DOC_OFICINA" target="_blank" class="boton-accion">Ver Informe APA</a>
                 </div>
-            </div>
+
         </section>
 
         <section id="mantenimiento">
@@ -93,15 +166,38 @@
                 </div>
             </div>
         </section>
-        <dialog id="modal-info">
-            <h3>Layout de Placa Madre ASUS</h3>
-            <img src="images/manual_layout.png" alt="Esquema del manual de ASUS B560"
-                style="width: 100%; height: auto;">
-            <p>El zócalo LGA1200 aloja el procesador Intel Core i5-10400. Se observan las ranuras DIMM para los 16GB de
-                memoria RAM instalada.</p>
-            <button id="btn-cerrar" class="boton-accion">Cerrar Explicación</button>
-        </dialog>
+        <section id="arduino">
+            <h2>Proyectos Arduino e IoT</h2>
+            <p>Aplicación práctica de programación en C++ y electrónica para resolver problemas del mundo real.</p>
+
+            <div class="galeria-grid">
+                <div class="tarjeta">
+                    <img src="images/lentes_ciegos.jpg" alt="Prototipo de lentes para ciegos con sensor ultrasónico">
+                    <h3>Lentes Asistenciales</h3>
+                    <p>Hardware: Microcontrolador ESP32, Sensor Ultrasónico, Buzzer.</p>
+                    <p>Lógica: Detección de proximidad y emisión de alertas sonoras.</p>
+                    <a href="LINK_AL_CODIGO_O_INFORME" target="_blank" class="boton-accion">Ver Código y Circuito</a>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/basurero.jpg" alt="Basurero automatizado con Arduino">
+                    <h3>Basurero Inteligente</h3>
+                    <p>Hardware: Placa Arduino, Servomotor, Sensor de Proximidad.</p>
+                    <p>Lógica: Apertura automática del contenedor mediante detección de movimiento.</p>
+                    <a href="LINK_AL_CODIGO_O_INFORME" target="_blank" class="boton-accion">Ver Código y Circuito</a>
+                </div>
+            </div>
+        </section>
+
+
     </main>
+    <dialog id="modal-info">
+        <h3>Layout de Placa Madre ASUS</h3>
+        <img src="images/manual_layout.png" alt="Esquema del manual de ASUS B560" style="width: 100%; height: auto;">
+        <p>El zócalo LGA1200 aloja el procesador Intel Core i5-10400. Se observan las ranuras DIMM para los 16GB de
+            memoria RAM instalada.</p>
+        <button id="btn-cerrar" class="boton-accion">Cerrar Explicación</button>
+    </dialog>
     <script src="scripts/main.js"></script>
 </body>
 
