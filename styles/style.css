@@ -1,0 +1,86 @@
+/* HOJA DE ESTILOS CSS (Cascading Style Sheets)
+   Aquí le damos color, forma y posición a nuestro esqueleto HTML.
+   Nota: Los navegadores ignoran todo lo que está escrito entre estas barras y asteriscos.
+*/
+
+/* El selector 'body' aplica estilos a toda la página visible */
+body {
+    /* Define la tipografía. Si la computadora no tiene Arial, usará cualquier fuente sin "serifas" (sin adornos) */
+    font-family: Arial, sans-serif;
+    
+    /* Pinta el fondo de toda la página de un gris muy clarito (usamos códigos de color Hexadecimal) */
+    background-color: #f8fafc;
+    
+    /* Define el color del texto general (un gris oscuro, más suave de leer que el negro puro) */
+    color: #334155;
+    
+    /* Los navegadores agregan un margen blanco a los bordes por defecto. Con esto lo eliminamos para aprovechar el 100% de la pantalla */
+    margin: 0; 
+}
+
+/* El selector 'nav' modifica nuestra barra de navegación (el contenedor del menú) */
+nav {
+    /* Color de fondo del menú (azul muy oscuro) */
+    background-color: #1e293b;
+    
+    /* 'padding' genera espacio interno (relleno) para que el menú no quede apretado contra los bordes */
+    padding: 15px;
+    
+    /* 'sticky' hace que el menú se quede "pegado" en la pantalla cuando el usuario hace scroll hacia abajo */
+    position: sticky; 
+    
+    /* Le indica al menú pegajoso que se fije exactamente en el borde superior de la pantalla (0 píxeles) */
+    top: 0;
+}
+
+/* 'nav ul' selecciona específicamente la lista (ul) que está dentro del menú (nav) */
+nav ul {
+    /* Quita los puntos negros que traen las listas por defecto en HTML */
+    list-style: none; 
+    
+    /* Flexbox: Es la herramienta moderna que transforma la lista vertical en una fila horizontal */
+    display: flex; 
+    
+    /* Centra los elementos de esa fila exactamente en el medio de la pantalla */
+    justify-content: center; 
+    
+    /* Define una separación exacta de 30 píxeles entre cada ítem del menú */
+    gap: 30px;
+    
+    /* Quitamos los márgenes y rellenos automáticos para tener control total */
+    margin: 0;
+    padding: 0;
+}
+
+/* 'nav a' selecciona los enlaces o links (a) que están dentro del menú */
+nav a {
+    /* Cambia el color del texto del link a blanco para que contraste con el fondo oscuro */
+    color: white;
+    
+    /* Quita la típica línea azul subrayada que traen los links por defecto */
+    text-decoration: none; 
+    
+    /* Pone el texto en negrita para que parezcan botones reales y sean más fáciles de leer */
+    font-weight: bold;
+}
+
+/* 'main' selecciona el contenedor principal donde va todo nuestro contenido (textos, fotos, etc.) */
+main {
+    /* Evita que el texto se estire de punta a punta en monitores muy anchos. Lo limita a 800 píxeles máximo */
+    max-width: 800px;
+    
+    /* El truco clásico de CSS para centrar un bloque: 0 margen arriba/abajo, y margen 'auto' a los costados */
+    margin: 0 auto; 
+    
+    /* Da un espacio interior (relleno) para que el texto no toque los bordes invisibles de la caja */
+    padding: 20px;
+}
+
+/* 'section' selecciona cada una de nuestras divisiones temáticas (Inicio, Componentes, etc.) */
+section {
+    /* 'vh' significa Viewport Height (Altura de la pantalla). 80vh hace que cada sección ocupe al menos el 80% del alto total */
+    min-height: 80vh; 
+    
+    /* Empuja el contenido 50 píxeles hacia abajo. Esto es vital para evitar que el menú 'sticky' tape nuestros títulos al bajar */
+    padding-top: 50px;
+}
