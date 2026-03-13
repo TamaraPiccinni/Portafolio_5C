@@ -79,7 +79,7 @@ dialog {
     border-radius: 10px; /* Redondea la ventana */
     padding: 25px; /* Espacio interno de la ventana */
     width: 90%; /* Le decimos que ocupe el 90% del ancho de la pantalla (ideal para celulares) */
-    max-width: 950px; /* En computadoras, le permitimos crecer hasta 950 píxeles de ancho (antes estaba en 600px) */
+    max-width: 2000px; /* En computadoras, le permitimos crecer hasta 2000 píxeles de ancho (antes estaba en 600px) */
     box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Sombra pronunciada para destacar */
 }
 
