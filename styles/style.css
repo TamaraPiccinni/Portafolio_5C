@@ -87,3 +87,65 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo de la página al abrirse */
 }
 
+/* --- ETAPA 6: TOQUES FINALES (FOOTER, ANIMACIONES Y RESPONSIVE) --- */
+
+/* 1. DISEÑO DEL FOOTER */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px; /* Lo separa del contenido principal */
+    font-size: 0.9rem;
+}
+
+/* 2. MICRO-ANIMACIONES (EFECTO ANTIGRAVEDAD) */
+/* Seleccionamos las tarjetas e indicamos que cualquier cambio debe ser fluido (0.3 segundos) */
+.tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo-clase ':hover' (detecta cuando el puntero del mouse pasa por encima) */
+.tarjeta:hover {
+    /* translateY(-10px) levanta la tarjeta 10 píxeles hacia arriba simulando flotar */
+    transform: translateY(-10px);
+    
+    /* Aumentamos la sombra debajo para reforzar el efecto 3D de que se separó del fondo */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.boton-accion {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-accion:hover {
+    background-color: #2563eb; /* Azul más oscuro al pasar el mouse */
+    transform: scale(1.05); /* El botón "late" o crece un 5% */
+}
+
+/* 3. MEDIA QUERIES (PUNTOS DE RUPTURA PARA CELULARES) */
+/* Todo el código dentro de esta regla SOLO se ejecutará si la pantalla mide 600px de ancho o menos */
+@media screen and (max-width: 600px) {
+    
+    /* Modificamos el menú para que los botones se apilen en vertical en vez de estar en fila */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Reducimos el espacio entre botones */
+    }
+
+    /* Achicamos los títulos principales para que no se desborden de la pantalla del celular */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Reducimos el relleno interno de la ventana modal para ganar espacio */
+    dialog {
+        padding: 15px;
+        width: 95%; /* Aprovechamos casi todo el ancho de la pantallita */
+    }
+}
