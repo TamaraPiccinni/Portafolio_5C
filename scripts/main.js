@@ -32,3 +32,24 @@ botonCerrar.addEventListener('click', function() {
        Este método cambia el estado del elemento a oculto y devuelve el foco al documento. */
     ventanaModal.close();
 });
+
+/* --- ETAPA 7: LÓGICA DEL MODO OSCURO (ESTILO SUTIL) --- */
+
+/* 1. Capturamos el nodo del botón flotante */
+const botonTema = document.getElementById('btn-tema');
+
+/* 2. Escuchamos el evento de clic */
+botonTema.addEventListener('click', function() {
+    
+    /* El método toggle inyecta o retira la clase 'modo-oscuro' del body */
+    document.body.classList.toggle('modo-oscuro');
+    
+    /* Lógica Condicional (If/Else): Evaluamos qué ícono mostrar */
+    if (document.body.classList.contains('modo-oscuro')) {
+        /* Si el modo oscuro está activo, cambiamos el texto por un sol */
+        botonTema.textContent = '☀'; 
+    } else {
+        /* Si el modo oscuro se apagó, volvemos a la luna */
+        botonTema.textContent = '☽'; 
+    }
+});

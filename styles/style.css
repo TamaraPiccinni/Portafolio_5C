@@ -149,3 +149,56 @@ footer {
         width: 95%; /* Aprovechamos casi todo el ancho de la pantallita */
     }
 }
+
+/* --- ETAPA 7: MODO OSCURO Y BOTÓN FLOTANTE --- */
+
+/* 1. Diseño del botón sutil */
+.interruptor-tema {
+    position: fixed; /* Lo saca del flujo normal y lo ancla a la pantalla */
+    top: 50px; /* Separación desde el techo */
+    right: 50px; /* Separación desde el borde derecho */
+    z-index: 1000; /* Se asegura de que siempre flote por encima de las fotos o textos */
+    
+    background: transparent; /* Fondo invisible */
+    border: none; /* Sin borde */
+    font-size: 2rem; /* Tamaño grande para la silueta */
+    color: #334155; /* Color gris oscuro inicial */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Pequeña animación al pasar el mouse por encima de la luna/sol */
+.interruptor-tema:hover {
+    transform: scale(1.1) rotate(10deg); 
+}
+
+/* 2. Reglas del Modo Oscuro */
+/* Cuando JS le agregue la clase 'modo-oscuro' al body, estos colores mandan */
+body.modo-oscuro {
+    background-color: #0f172a; /* Fondo azul noche profundo */
+    color: #e2e8f0; /* Texto gris claro */
+}
+
+/* Invertimos el color del botón flotante para que se vea en la oscuridad */
+body.modo-oscuro .interruptor-tema {
+    color: #eab308; /* Lo pintamos de amarillo */
+}
+
+/* Oscurecemos el fondo de las tarjetas de hardware */
+body.modo-oscuro .tarjeta {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #f8fafc;
+}
+
+/* Oscurecemos la ventana modal (dialog) */
+body.modo-oscuro dialog {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+/* Ajustamos el color de los enlaces generales en modo oscuro */
+body.modo-oscuro a {
+    color: #60a5fa;
+}
+
