@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>   
-<nav>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#componentes">Hardware</a></li>
-    </ul>
-</nav>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#componentes">Hardware</a></li>
+        </ul>
+    </nav>
 
 
-<main>
-    <section id="inicio">
-        <h1>Bitácora de Laboratorio 2026</h1>
-        <p>Tamara Piccinni - Docente - 5to Año</p>
-    </section>
+    <main>
+        <section id="inicio">
+            <h1>Bitácora de Laboratorio 2026</h1>
+            <p>Tamara Piccinni - Docente - 5to Año</p>
+        </section>
 
-    <section id="componentes">
-        <h2>Diagnóstico de Componentes (PC Tamy)</h2>
-        <a href="https://docs.google.com/document/d/1iBr_C53eDOQ4E-mRaSwbiN0lhdJy670shvgOXKSPQ-k/edit?usp=sharing">Ver Ficha Técnica Completa</a>
-         <div class="galeria-grid">
-        <div class="tarjeta">
-            <img src="images/asus_b560.png" alt="Placa Madre ASUS STRIX B560-A">
-            <h3>Placa Madre</h3>
-            <p>Modelo: ASUS STRIX B560-A GAMING WIFI</p>
-            <button id="btn-diagnostico" class="boton-accion">Ver Layout del Manual</button>
-        </div>
-        
-        <div class="tarjeta">
-            <img src="images/procesador.jpg" alt="Procesador Intel Core i5">
-            <h3>Microprocesador</h3>
-            <p>Modelo: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz</p>
-            <p>Arquitectura: 64 bits, x64</p>
-        </div>
+        <section id="componentes">
+            <h2>Diagnóstico de Componentes (PC Tamy)</h2>
+            <a href="https://docs.google.com/document/d/1iBr_C53eDOQ4E-mRaSwbiN0lhdJy670shvgOXKSPQ-k/edit?usp=sharing">Ver
+                Ficha Técnica Completa</a>
+            <div class="galeria-grid">
+                <div class="tarjeta">
+                    <img src="images/asus_b560.png" alt="Placa Madre ASUS STRIX B560-A">
+                    <h3>Placa Madre</h3>
+                    <p>Modelo: ASUS STRIX B560-A GAMING WIFI</p>
+                    <button id="btn-diagnostico" class="boton-accion">Ver Layout del Manual</button>
+                </div>
 
-        <div class="tarjeta">
-            <img src="images/ram.jpg" alt="Memoria RAM">
-            <h3>Memoria RAM</h3>
-            <p>Capacidad: 16.0 GB instalada (15.8 GB utilizable)</p>
-        </div>
-    </div>
-</section>
-</main>
+                <div class="tarjeta">
+                    <img src="images/procesador.jpg" alt="Procesador Intel Core i5">
+                    <h3>Microprocesador</h3>
+                    <p>Modelo: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz</p>
+                    <p>Arquitectura: 64 bits, x64</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="images/ram.jpg" alt="Memoria RAM">
+                    <h3>Memoria RAM</h3>
+                    <p>Capacidad: 16.0 GB instalada (15.8 GB utilizable)</p>
+                </div>
+            </div>
+        </section>
+        <dialog id="modal-info">
+            <h3>Layout de Placa Madre ASUS</h3>
+            <img src="images/manual_layout.png" alt="Esquema del manual de ASUS B560"
+                style="width: 100%; height: auto;">
+            <p>El zócalo LGA1200 aloja el procesador Intel Core i5-10400. Se observan las ranuras DIMM para los 16GB de
+                memoria RAM instalada.</p>
+            <button id="btn-cerrar" class="boton-accion">Cerrar Explicación</button>
+        </dialog>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

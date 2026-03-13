@@ -73,3 +73,16 @@ section {
     cursor: pointer; /* Transforma el cursor en una mano indicando interactividad */
     margin-top: 10px; /* Margen superior para separación */
 }
+
+dialog {
+    border: none; /* Quita el borde por defecto */
+    border-radius: 10px; /* Redondea la ventana */
+    padding: 25px; /* Espacio interno de la ventana */
+    max-width: 500px; /* Ancho máximo en pantallas grandes */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Sombra pronunciada para destacar */
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo de la página al abrirse */
+}
+
