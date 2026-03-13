@@ -84,3 +84,36 @@ section {
     /* Empuja el contenido 50 píxeles hacia abajo. Esto es vital para evitar que el menú 'sticky' tape nuestros títulos al bajar */
     padding-top: 50px;
 }
+
+.galeria-grid {
+    display: grid; /* Activa CSS Grid, la herramienta más potente para crear cuadrículas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño responsivo: adapta columnas al ancho disponible */
+    gap: 20px; /* Define un espacio exacto de 20 píxeles entre cada tarjeta */
+    margin-top: 30px; /* Separa la galería 30 píxeles del elemento que tenga arriba */
+}
+
+.tarjeta {
+    background-color: white; /* Fondo blanco para que la tarjeta resalte */
+    border: 1px solid #cbd5e1; /* Un borde gris muy sutil para delimitar la caja */
+    border-radius: 8px; /* Redondea las esquinas de la caja */
+    padding: 15px; /* Espacio interno para que el texto y la foto no toquen los bordes */
+    text-align: center; /* Centra el texto y el botón dentro de la tarjeta */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Genera una sombra para dar efecto de profundidad */
+}
+
+.tarjeta img {    
+    width: 100%; /* La imagen ocupará siempre el 100% del ancho disponible en su tarjeta */
+    height: 200px; /* Fija una altura exacta para uniformidad */
+    object-fit: cover; /* Evita que la foto se deforme al forzarle la altura */
+    border-radius: 5px; /* Redondea las esquinas de la foto */
+}
+
+.boton-accion {
+    background-color: #3b82f6; /* Color de fondo azul moderno */
+    color: white; /* Texto en blanco para contrastar */
+    border: none; /* Quita el borde estándar de los navegadores */
+    padding: 10px 15px; /* Relleno interno del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Transforma el cursor en una mano indicando interactividad */
+    margin-top: 10px; /* Margen superior para separación */
+}
