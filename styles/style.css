@@ -78,7 +78,8 @@ dialog {
     border: none; /* Quita el borde por defecto */
     border-radius: 10px; /* Redondea la ventana */
     padding: 25px; /* Espacio interno de la ventana */
-    max-width: 500px; /* Ancho máximo en pantallas grandes */
+    width: 90%; /* Le decimos que ocupe el 90% del ancho de la pantalla (ideal para celulares) */
+    max-width: 950px; /* En computadoras, le permitimos crecer hasta 950 píxeles de ancho (antes estaba en 600px) */
     box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Sombra pronunciada para destacar */
 }
 
