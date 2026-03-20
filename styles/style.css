@@ -37,9 +37,21 @@ main {
 }
 
 section {
-    min-height: 80vh; /* 80vh hace que cada sección ocupe al menos el 80% del alto de la pantalla */
+    margin-bottom: 60px; /* Separa cada sección con un margen inferior de 60 píxeles para que no queden amontonadas */
     padding-top: 50px; /* Empuja el contenido hacia abajo para que el menú pegajoso no lo tape */
+    
+/* Centra el texto y el contenido exclusivamente en la sección de inicio */
+#inicio {
+    text-align: center;
+    margin-top: 20px;
 }
+
+/* Le da color azul y un pequeño margen al ícono vectorial de la computadora */
+#inicio svg {
+    color: #3b82f6; 
+    margin-top: 15px;
+}
+
 
 .galeria-grid {
     display: grid; /* Activa CSS Grid, la herramienta más potente para crear cuadrículas */
