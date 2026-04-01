@@ -1,8 +1,9 @@
 /* HOJA DE ESTILOS CSS (Cascading Style Sheets) */
 
 body {
-    font-family: Arial, sans-serif; /* Define la tipografía. Si no está Arial, usa otra sin adornos */
-    background-color: #f8fafc; /* Fondo claro elegante (gris muy suave, casi blanco) */
+        /* Cambiamos la fuente global a "Inter", la tipografía más usada en apps modernas */
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8fafc;
     color: #334155; /* Color del texto (un gris muy oscuro para no cansar la vista) */
     margin: 0; /* Elimina el margen blanco que los navegadores ponen por defecto */
     transition: background-color 0.3s, color 0.3s; /* Prepara el terreno para un cambio de tema suave */
@@ -245,3 +246,20 @@ body.modo-oscuro .caja-destacada {
     transform: translate(-50%, -50%); /* Centra el círculo exactamente en la punta del cursor */
 }
 
+/* --- ETAPA 11: GLASSMORPHISM Y SCROLLBAR --- */
+
+/* Modificamos el menú para que parezca de cristal (tipo Windows 11 o macOS) */
+nav {
+    background-color: rgba(30, 41, 59, 0.8) !important; /* Azul oscuro con 80% de opacidad */
+    backdrop-filter: blur(10px); /* Pide a la tarjeta gráfica que desenfoque lo que pasa por detrás */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores basados en Safari */
+}
+
+/* Personalización del Scrollbar (Barra de desplazamiento) */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9; /* Color de la pista o "carril" */
+}
