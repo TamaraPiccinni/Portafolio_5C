@@ -53,3 +53,19 @@ botonTema.addEventListener('click', function() {
         botonTema.textContent = '☽'; 
     }
 });
+/* --- ETAPA 10: LÓGICA DEL SEGUIDOR DE CURSOR --- */
+
+// 1. Capturamos el nodo del círculo
+const seguidor = document.getElementById('cursor-follower');
+
+// 2. Escuchamos el evento global de movimiento del mouse en todo el documento
+document.addEventListener('mousemove', (e) => {
+    // El objeto 'e' (evento) contiene la información enviada por el hardware
+    // Capturamos las coordenadas exactas en los ejes X (horizontal) e Y (vertical)
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // Inyectamos esas coordenadas en el CSS del círculo usando Template Literals (comillas invertidas)
+    seguidor.style.left = `${x}px`;
+    seguidor.style.top = `${y}px`;
+});

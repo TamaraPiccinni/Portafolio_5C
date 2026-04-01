@@ -230,4 +230,18 @@ body.modo-oscuro .caja-destacada {
     background-color: #1e293b; /* Fondo azul noche profundo */
     border: 1px solid #334155; /* Borde sutil para que no se pierda en el fondo oscuro */
 }
-} 
+/* --- ETAPA 10: ESTÉTICA DEL SEGUIDOR DE CURSOR --- */
+#cursor-follower {
+    position: fixed; /* Lo saca del flujo normal para moverse libremente */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(59, 130, 246, 0.4); /* Azul traslúcido */
+    border-radius: 50%; /* Lo convierte en un círculo perfecto */
+    
+    pointer-events: none; /* INVISIBLE PARA CLICS: Permite cliquear lo que hay debajo */
+    z-index: 9999; /* Lo coloca en la capa más alta (por encima de todo) */
+    
+    transition: transform 0.1s ease-out; /* Suaviza el movimiento */
+    transform: translate(-50%, -50%); /* Centra el círculo exactamente en la punta del cursor */
+}
+
