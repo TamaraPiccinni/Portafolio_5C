@@ -38,7 +38,7 @@ main {
 
 section {
     margin-bottom: 60px; /* Separa cada sección con un margen inferior de 60 píxeles para que no queden amontonadas */
-    padding-top: 50px; /* Empuja el contenido hacia abajo para que el menú pegajoso no lo tape */
+    padding-top: 0 cm; /* Empuja el contenido hacia abajo para que el menú pegajoso no lo tape */
     
 /* Centra el texto y el contenido exclusivamente en la sección de inicio */
 #inicio {
